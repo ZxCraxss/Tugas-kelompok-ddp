@@ -49,7 +49,6 @@ int main(){
     baris = (posisi - 1) / 3;
     kolom = (posisi - 1) % 3;
 
-    if (posisi < 1 || posisi > 9 || (papan[baris][kolom] == 'X'
-
+   
 return 0;
 }
