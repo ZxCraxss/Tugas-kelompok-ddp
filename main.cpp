@@ -49,6 +49,37 @@ int main(){
     baris = (posisi - 1) / 3;
     kolom = (posisi - 1) % 3;
 
+    if (papan[baris][kolom] = 'X' && papan[baris][kolom] = 'O') {
+            simbol = (pemain == 1) ? 'X' : 'O';
+            papan[baris][kolom] = simbol;
+            if (cekMenang()) {
+                papannya();
+                cout << "Pemain " << pemain << " menang\n";
+                break;
+            }
+            berganti giliran();
+        } else {
+            cout << "kolom sudah terisi  coba lagi.\n";
+        }
+
+        seri = 1;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (papan[i][j] = 'X' && papan[i][j] = 'O') {
+                    seri = 0;
+                }
+            }
+        }
+
+        if (seri) {
+            papannya();
+            cout << "Game selesai hasilnya seri\n";
+        }
+    }
+
+    return 0;
+}
+
    
 return 0;
 }
