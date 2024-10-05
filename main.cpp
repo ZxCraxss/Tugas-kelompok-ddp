@@ -8,7 +8,7 @@ bool seri = false;
 
 void papannya() {
 cout<<"    |     |     "<<endl;
-cout<<"  "<<papan[0][0]<<" |  " <<papan[0][1]<<"  |  "<<papan[0][2]<<endl;
+cout<<"  "<<papan[0][0]<<"  |  " <<papan[0][1]<<"  |  "<<papan[0][2]<<endl;
 cout<<"____|_____|_____"<<endl;
 }
 
