@@ -10,9 +10,46 @@ void papannya() {
 cout<<"    |     |     "<<endl;
 cout<<"  "<<papan[0][0]<<"  |  " <<papan[0][1]<<"  |  "<<papan[0][2]<<endl;
 cout<<"____|_____|_____"<<endl;
+cout<<"    |     |     "<<endl;
+cout<<"  " << papan[2][0]<< " | " << papan [2][1]<< " | " << papan [2][2]<<endl;
+cout<<"    |     |     "<<endl;
+}
+
+bool Winner(){
+for (int i = 0; i < 3; i++){
+if papan [i][0] == pemain && papan[i][1] == pemain && papan[i][2] == pemain)
+return true;
+}
+for (int i = 0; i < 3; i++){
+  if papan [0][i] == pemain && papan[1][i] == pemain && papan[2][i] == pemain)
+return true;
+}
+if ((papan[0][0] == pemain && papan[1][1] == pemain && papan[2][2] == pemain)||
+    (papan[0][2] == pemain && papan[1][1] == pemain && papan[2][0] == pemain)){
+return true;
+  }
+return false;
+}
+
+bool BoardFull(){
+  for(int i = 0; i < 3; i++)
+    for (int j = 0; j < 3; j++)
+      if (papan[1][j] != 'X' && papan [i][j] !='O')
+        return false;
+return true;
 }
 
 int main(){
-papannya();
+  while (!seri){
+    papannya();
+    cout << "Pemain " << pemain << ", masukkan nomir posisi (1-9): ";
+    int posisi;
+    cin>>posisi;
+
+    baris = (posisi - 1) / 3;
+    kolom = (posisi - 1) % 3;
+
+    if (posisi < 1 || posisi > 9 || (papan[baris][kolom] == 'X'
+
 return 0;
 }
