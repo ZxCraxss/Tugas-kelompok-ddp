@@ -4,7 +4,6 @@ using namespace std;
 char papan[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 char pemain = 'X';
 int baris, kolom;
-bool seri = false;
 
 void papannya() {
     cout << "     |     |     " << endl;
