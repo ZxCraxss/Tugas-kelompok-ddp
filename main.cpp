@@ -34,10 +34,13 @@ return false;
 }
 
 bool BoardFull(){
-  for(int i = 0; i < 3; i++)
-    for (int j = 0; j < 3; j++)
-      if (papan[1][j] != 'X' && papan [i][j] !='O')
+  for(int i = 0; i < 3; i++){
+    for (int j = 0; j < 3; j++){
+      if (papan[i][j] != 'X' && papan [i][j] !='O'){
         return false;
+      }
+    }
+  }
 return true;
 }
 
